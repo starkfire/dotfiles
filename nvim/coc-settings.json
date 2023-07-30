@@ -1,0 +1,9 @@
+{
+	"languageserver": {},
+	"suggest.timeout": 5000,
+	"workspace.ignoredFolders": [
+		"$HOME",
+		"$HOME/.cargo/**",
+		"$HOME/.rustup/**"
+	]
+}
