@@ -22,6 +22,7 @@ Plug 'ervandew/supertab'
 # code completion
 Plug 'neoclide/coc.nvim', { 'branch': 'master', 'do': 'yarn install --frozen-lockfile' }
 Plug 'pappasam/coc-jedi', { 'branch': 'main', 'do': 'yarn install --frozen-lockfile && yarn build' }
+Plug 'yaegassy/coc-laravel', { 'do': 'yarn install --frozen-lockfile' }
 
 # syntax highlighting
 " Plug 'sheerun/vim-polyglot'
@@ -34,9 +35,10 @@ Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
-" linting
-" does not work well with CoC, so I had to disable this for the time being
+" linting / static analysis
+" dense-analysis/ale does not work well with CoC, so I had to disable this for the time being
 " Plug 'dense-analysis/ale'
+Plug 'yaegassy/coc-phpstan', { 'do': 'yarn install --frozen-lockfile' }
 
 " color themes
 Plug 'folke/tokyonight.nvim'
