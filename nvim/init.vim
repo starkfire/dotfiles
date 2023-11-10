@@ -1,10 +1,14 @@
 set nocompatible
 set encoding=utf-8
 
+" some servers have issues with backup files (coc.nvim #649)
 set nobackup
 set nowritebackup
 
+" shorter updatetime
 set updatetime=300
+
+" prevent text from shifting each time diagnostics appear
 set signcolumn=yes
 
 set omnifunc=syntaxcomplete#Complete
@@ -16,12 +20,15 @@ Plug 'vim-airline/vim-airline'
 Plug 'ervandew/supertab'
 
 # code completion
-Plug 'davidhalter/jedi-vim'
 Plug 'neoclide/coc.nvim', { 'branch': 'master', 'do': 'yarn install --frozen-lockfile' }
+Plug 'pappasam/coc-jedi', { 'branch': 'main', 'do': 'yarn install --frozen-lockfile && yarn build' }
 
 # syntax highlighting
 " Plug 'sheerun/vim-polyglot'
 Plug 'nvim-treesitter/nvim-treesitter'
+
+" additional plugin for Vue syntax highlighting with vim-polyglot
+" Plug 'posva/vim-vue'
 
 " fuzzy file finder
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -33,21 +40,21 @@ Plug 'junegunn/fzf.vim'
 
 " color themes
 Plug 'folke/tokyonight.nvim'
-" Plug 'danilo-augusto/vim-afterglow'
-" Plug 'sickill/vim-monokai'
+Plug 'sainnhe/sonokai'
 
 call plug#end()
 
-filetype plugin on
-filetype indent on
+filetype plugin indent on
 
 syntax enable
 
 set shiftwidth=4
+set softtabstop=4
 set tabstop=4
 set showcmd
 set number
 
+" search
 set ignorecase
 set smartcase
 
@@ -59,8 +66,23 @@ inoremap " ""<Esc>ha
 inoremap ' ''<Esc>ha
 inoremap ` ``<Esc>ha
 
-" color scheme
-colorscheme tokyonight-night
-
-" vim-airline
+" status bar
 let g:airline_powerline_fonts=1
+
+" vim-vue
+" let g:vue_pre_processors = ['scss']
+
+" python provider (solves an issue of coc-jedi on Windows)
+" let g:python3_host_prog = 'C:/Python39/python.EXE'
+
+" sonokai
+if has('termguicolors')
+    set termguicolors
+endif
+
+let g:sonokai_style = 'maia'
+let g:sonokai_better_performance = 1
+let g:airline_theme = 'sonokai'
+
+" set color scheme
+colorscheme sonokai
