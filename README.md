@@ -33,6 +33,7 @@ For Python, you can also use [coc-pyright](https://github.com/fannheyward/coc-py
 * coc-rust-analyzer
 * coc-json
 * coc-go
+* coc-clangd
 
 ## Zsh
 
