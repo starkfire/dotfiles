@@ -75,7 +75,8 @@ let g:airline_powerline_fonts=1
 " let g:vue_pre_processors = ['scss']
 
 " python provider (solves an issue of coc-jedi on Windows)
-" let g:python3_host_prog = 'C:/Python39/python.EXE'
+" adjust this depending on your setup
+let g:python3_host_prog = 'C:/Python39/python.EXE'
 
 " sonokai
 if has('termguicolors')
@@ -88,3 +89,6 @@ let g:airline_theme = 'sonokai'
 
 " set color scheme
 colorscheme sonokai
+
+" retain Windows Terminal's configured opacity
+hi Normal guibg=NONE ctermbg=NONE
