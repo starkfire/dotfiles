@@ -94,3 +94,14 @@ colorscheme sonokai
 
 " retain Windows Terminal's configured opacity
 hi Normal guibg=NONE ctermbg=NONE
+
+" enable documentations in preview window
+nnoremap <silent> K :call ShowDocumentation()<CR>
+
+function! ShowDocumentation()
+    if CocAction('hasProvider', 'hover')
+        call CocActionAsync('doHover')
+    else
+        call feedKeys('K', 'in')
+    endif
+endfunction
