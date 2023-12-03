@@ -22,7 +22,9 @@ Plug 'ervandew/supertab'
 # code completion
 Plug 'neoclide/coc.nvim', { 'branch': 'master', 'do': 'yarn install --frozen-lockfile' }
 Plug 'pappasam/coc-jedi', { 'branch': 'main', 'do': 'yarn install --frozen-lockfile && yarn build' }
+Plug 'yaegassy/coc-phpstan', { 'do': 'yarn install --frozen-lockfile' }
 Plug 'yaegassy/coc-laravel', { 'do': 'yarn install --frozen-lockfile' }
+Plug 'mattn/emmet-vim'
 
 # syntax highlighting
 " Plug 'sheerun/vim-polyglot'
