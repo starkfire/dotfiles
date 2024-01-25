@@ -140,6 +140,7 @@ ins_left {
 
 ins_left {
     function()
+        -- uncomment if you prefer using a different LSP
         --[[local msg = 'No Active Lsp'
         local buf_ft = vim.api.nvim_buf_get_option(0, 'filetype')
         local clients = vim.lsp.get_active_clients()
