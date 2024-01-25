@@ -11,7 +11,7 @@ o.number            = true
 o.ignorecase        = true
 o.smartcase         = true
 
-o.wrap              = false
+o.wrap              = true
 o.termguicolors     = true
 
 -- some servers have issues with backup files (coc.nvim #649)
