@@ -1,5 +1,5 @@
-local tokyonightColor = "#2d3149"
-local bg_dark = "#1f2335"
+local tokyonight_color = "#2d3149"
+local bg_dark = "#16161e"
 local text_color = "#131a21"
 
 local TelescopePrompt = {
@@ -12,11 +12,11 @@ local TelescopePrompt = {
         fg = bg_dark
     },
     TelescopePromptNormal = { 
-        bg = tokyonightColor
+        bg = tokyonight_color
     },
     TelescopePromptBorder = { 
-        bg = tokyonightColor, 
-        fg = tokyonightColor
+        bg = tokyonight_color, 
+        fg = tokyonight_color
     },
     TelescopePromptTitle = { 
         bg = "#dd7f88", 
@@ -48,6 +48,6 @@ return {
     'folke/tokyonight.nvim',
     config = function()
         require('tokyonight').setup()
-        vim.cmd("colorscheme tokyonight")
+        vim.cmd("colorscheme tokyonight-night")
     end
 }
