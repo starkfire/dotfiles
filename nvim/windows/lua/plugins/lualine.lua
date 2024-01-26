@@ -141,7 +141,8 @@ ins_left {
 ins_left {
     function()
         -- uncomment if you prefer using a different LSP
-        --[[local msg = 'No Active Lsp'
+        --[[
+        local msg = 'No Active Lsp'
         local buf_ft = vim.api.nvim_buf_get_option(0, 'filetype')
         local clients = vim.lsp.get_active_clients()
         if next(clients) == nil then
@@ -153,7 +154,10 @@ ins_left {
                 return client.name
             end
         end
-        return msg]]--
+        return msg
+        ]]--
+        
+        -- use only if you are using CoC
         return "%{coc#status()}%{get(b:,'coc_current_function','')}"
     end,
     icon = ' LSP:',
