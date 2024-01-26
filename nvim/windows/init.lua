@@ -22,9 +22,3 @@ require('lazy').setup('plugins')
 
 -- Python provider
 vim.g.python3_host_prog = 'C:/Python39/python.EXE'
-
--- color scheme
-vim.g.sonokai_style = 'shusia'
-vim.g.sonokai_better_performance = 1
-
-vim.cmd 'colorscheme sonokai'
